@@ -1,0 +1,31 @@
+---- failsafeCnt Matches (30 in 7 files) ----
+Buzzer.c (src):        if (failsafeCnt > (5 * cfg.failsafe_delay) && f.ARMED) {
+Buzzer.c (src):            if (failsafeCnt > 5 * (cfg.failsafe_delay + cfg.failsafe_off_delay))
+Buzzer.c (src):        if (failsafeCnt > (5 * cfg.failsafe_delay) && !f.ARMED)
+Buzzer.c (src):        if (failsafeCnt == 0)
+Drv_pwm.c (src):extern int16_t failsafeCnt;
+Drv_pwm.c (src):                if (failsafeCnt > 20)
+Drv_pwm.c (src):                    failsafeCnt -= 20;
+Drv_pwm.c (src):                    failsafeCnt = 0;
+Drv_pwm.c (src):        failsafeCnt = 0;
+Drv_pwm.c (src):        failsafeCnt = 0;
+Drv_pwm_fy90q.c (src):extern int16_t failsafeCnt;
+Drv_pwm_fy90q.c (src):                if (failsafeCnt > 20)
+Drv_pwm_fy90q.c (src):                    failsafeCnt -= 20;
+Drv_pwm_fy90q.c (src):                    failsafeCnt = 0;
+Drv_pwm_fy90q.c (src):        failsafeCnt = 0;
+Drv_pwm_fy90q.c (src):                failsafeCnt = 0;
+Mw.c (src):int16_t failsafeCnt = 0;
+Mw.c (src):        // TODO: feature(FEATURE_FAILSAFE) && failsafeCnt < 2
+Mw.c (src):        // TODO: && ( !feature || ( feature && ( failsafecnt > 2) )
+Mw.c (src):            if (failsafeCnt > (5 * cfg.failsafe_delay) && f.ARMED) { // Stabilize, and set Throttle to specified level
+Mw.c (src):                if (failsafeCnt > 5 * (cfg.failsafe_delay + cfg.failsafe_off_delay)) {  // Turn OFF motors after specified Time (in 0.1sec)
+Mw.c (src):            if (failsafeCnt > (5 * cfg.failsafe_delay) && !f.ARMED) {  // Turn off "Ok To arm to prevent the motors from spinning after repowering the RX with low throttle and aux to arm
+Mw.c (src):            failsafeCnt++;
+Mw.c (src):        // note: if FAILSAFE is disable, failsafeCnt > 5 * FAILSAVE_DELAY is always false
+Mw.c (src):        if ((rcOptions[BOXANGLE] || (failsafeCnt > 5 * cfg.failsafe_delay)) && (sensors(SENSOR_ACC))) {
+Mw.h (src):extern int16_t failsafeCnt;
+Sbus.c (src):extern int16_t failsafeCnt;
+Sbus.c (src):            failsafeCnt = 0; // clear FailSafe counter
+Spektrum.c (src):extern int16_t failsafeCnt;
+Spektrum.c (src):        failsafeCnt = 0;   // clear FailSafe counter
